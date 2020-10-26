@@ -9,8 +9,8 @@
     }
 
 	body {
-	    height: 100%;
 		margin: 0;
+        padding-top: 100px;
         font-family: sans-serif;
         display: flex;
         flex-direction: column;
@@ -19,11 +19,17 @@
 	}
 
     #gameCanvas {
-        display: flex;
+        padding: 100px;
+        padding-bottom: 20px;
+        padding-right: 30px;
+        width:300px; 
         flex-direction: column;
         align-items: center;
+        
     }
-
+    #gameCanvas .row{float: left; width: 75px;
+    height: 75px;
+}
     .row {
         display: flex;
         flex-direction: row;
@@ -47,22 +53,37 @@
         justify-content: center;
     }
 
-    .column:first-child {
+    /* .column:first-child {
         border-left: 2px solid #000;
     }
 
     .column:last-child {
         border-right: 2px solid #000;
-    }
+    } */
 
     .column:hover {
         background: #eeeeee;
     }
+    button{width: 75px;height: 30px; background-color:mintcream; border: 1px solid #000;}
+     span{color:#fff; background-color: black;}
 	</style>
 </head>
 <body>
-    <div id="gameCanvas"></div>
-    <button id="resetBtn">Reset</button>
-    <script src="./app.bundle.js"></script>
+    <span id="turn">play</span>
+    <div id="gameCanvas">
+        <div class="row column" id="column1"></div>
+        <div class="row column" id="column2"></div>
+        <div class="row column" id="column3"></div>
+        <div class="row column" id="column4"></div>
+        <div class="row column" id="column5"></div>
+        <div class="row column" id="column6"></div>
+        <div class="row column" id="column7"></div>
+        <div class="row column" id="column8"></div>
+        <div class="row column" id="column9"></div>
+    </div>
+    <button id="resetBtn" onclick="replay()">Reset</button>
+    <script src="./src/tt.js">
+
+     </script>
 </body>
 </html>
